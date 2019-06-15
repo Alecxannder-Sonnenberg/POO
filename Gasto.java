@@ -8,6 +8,14 @@ public class Gasto {
 	
 	int id;
 	int parcelas;
+	//Adicionei o construtor
+	public Gasto(String cat, String data, Double valor, int id, int par){
+		this.categoria = cat;
+		this.data = data;
+		this.valor = valor;
+		this.id = id;
+		this.parcelas = par
+	}
 
 	//SETS E GETS
 	public void setCategoria(String novaCategoria){
