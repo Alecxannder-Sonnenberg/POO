@@ -66,13 +66,15 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         saldoButton = new javax.swing.JButton();
         despesasButton = new javax.swing.JButton();
-        entradasButton = new javax.swing.JButton();
+        receitasButton = new javax.swing.JButton();
         dicasPanel = new javax.swing.JPanel();
         jButton7 = new javax.swing.JButton();
         saldoPanel = new javax.swing.JPanel();
         jButton8 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
         saldoSemanalButton = new javax.swing.JButton();
         saldoMensalButton = new javax.swing.JButton();
@@ -91,11 +93,11 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        entradasPanel = new javax.swing.JPanel();
+        receitasPanel = new javax.swing.JPanel();
         jButton10 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jButton14 = new javax.swing.JButton();
-        nomeEntrField = new javax.swing.JTextField();
+        nomeReceitaField = new javax.swing.JTextField();
         tipoField1 = new javax.swing.JTextField();
         valorField1 = new javax.swing.JTextField();
         parcelasField1 = new javax.swing.JTextField();
@@ -144,7 +146,7 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
-                .addContainerGap(531, Short.MAX_VALUE))
+                .addContainerGap(555, Short.MAX_VALUE))
         );
         startPanelLayout.setVerticalGroup(
             startPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -407,10 +409,10 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
             }
         });
 
-        entradasButton.setText("Entradas");
-        entradasButton.addActionListener(new java.awt.event.ActionListener() {
+        receitasButton.setText("Receitas");
+        receitasButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                entradasButtonActionPerformed(evt);
+                receitasButtonActionPerformed(evt);
             }
         });
 
@@ -424,8 +426,8 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
                     .addComponent(jButton6)
                     .addComponent(saldoButton)
                     .addComponent(despesasButton)
-                    .addComponent(entradasButton))
-                .addContainerGap(709, Short.MAX_VALUE))
+                    .addComponent(receitasButton))
+                .addContainerGap(733, Short.MAX_VALUE))
         );
         planejamentoPanelLayout.setVerticalGroup(
             planejamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -435,7 +437,7 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
                 .addGap(100, 100, 100)
                 .addComponent(despesasButton)
                 .addGap(112, 112, 112)
-                .addComponent(entradasButton)
+                .addComponent(receitasButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton6)
                 .addContainerGap())
@@ -459,7 +461,7 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
             .addGroup(dicasPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton7)
-                .addContainerGap(734, Short.MAX_VALUE))
+                .addContainerGap(758, Short.MAX_VALUE))
         );
         dicasPanelLayout.setVerticalGroup(
             dicasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -482,6 +484,36 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
 
         jLabel1.setText("Movimentação Financeira");
 
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Tipo", "Valor"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -489,13 +521,18 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(94, 94, 94)
                 .addComponent(jLabel1)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(182, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -531,7 +568,7 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
                 .addComponent(saldoAnualButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(analiseButton)
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addContainerGap(201, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout saldoPanelLayout = new javax.swing.GroupLayout(saldoPanel);
@@ -555,7 +592,7 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
                 .addGroup(saldoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(jButton8)
                 .addContainerGap())
         );
@@ -572,6 +609,11 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
         });
 
         jButton13.setText("Adicionar");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         nomeDespField.setText("Nome");
         nomeDespField.setPreferredSize(new java.awt.Dimension(100, 28));
@@ -711,7 +753,7 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
 
         mainPanel.add(despesasPanel, "card2");
 
-        entradasPanel.setPreferredSize(new java.awt.Dimension(800, 600));
+        receitasPanel.setPreferredSize(new java.awt.Dimension(800, 600));
 
         jButton10.setText("Voltar");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -721,9 +763,14 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
         });
 
         jButton14.setText("Adicionar");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
 
-        nomeEntrField.setText("Nome");
-        nomeEntrField.setPreferredSize(new java.awt.Dimension(100, 28));
+        nomeReceitaField.setText("Nome");
+        nomeReceitaField.setPreferredSize(new java.awt.Dimension(100, 28));
 
         tipoField1.setText("Tipo");
         tipoField1.setPreferredSize(new java.awt.Dimension(100, 28));
@@ -742,7 +789,7 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
         dataField1.setText("Data");
         dataField1.setPreferredSize(new java.awt.Dimension(100, 28));
 
-        jLabel3.setText("Nova Entr:");
+        jLabel3.setText("Nova Receita:");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -750,8 +797,8 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addComponent(nomeEntrField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(nomeReceitaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(tipoField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -770,7 +817,7 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
                 .addContainerGap(31, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton14)
-                    .addComponent(nomeEntrField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nomeReceitaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tipoField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(valorField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(parcelasField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -832,30 +879,30 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout entradasPanelLayout = new javax.swing.GroupLayout(entradasPanel);
-        entradasPanel.setLayout(entradasPanelLayout);
-        entradasPanelLayout.setHorizontalGroup(
-            entradasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(entradasPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout receitasPanelLayout = new javax.swing.GroupLayout(receitasPanel);
+        receitasPanel.setLayout(receitasPanelLayout);
+        receitasPanelLayout.setHorizontalGroup(
+            receitasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(receitasPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton10)
-                .addContainerGap(734, Short.MAX_VALUE))
-            .addGroup(entradasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(entradasPanelLayout.createSequentialGroup()
+                .addContainerGap(741, Short.MAX_VALUE))
+            .addGroup(receitasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(receitasPanelLayout.createSequentialGroup()
                     .addGap(12, 12, 12)
-                    .addGroup(entradasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(receitasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGap(12, 12, 12)))
         );
-        entradasPanelLayout.setVerticalGroup(
-            entradasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entradasPanelLayout.createSequentialGroup()
+        receitasPanelLayout.setVerticalGroup(
+            receitasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, receitasPanelLayout.createSequentialGroup()
                 .addContainerGap(558, Short.MAX_VALUE)
                 .addComponent(jButton10)
                 .addContainerGap())
-            .addGroup(entradasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(entradasPanelLayout.createSequentialGroup()
+            .addGroup(receitasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(receitasPanelLayout.createSequentialGroup()
                     .addGap(42, 42, 42)
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -863,7 +910,7 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
                     .addGap(42, 42, 42)))
         );
 
-        mainPanel.add(entradasPanel, "card2");
+        mainPanel.add(receitasPanel, "card2");
 
         getContentPane().add(mainPanel, "card2");
 
@@ -905,12 +952,12 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
         mainPanel.revalidate();
     }//GEN-LAST:event_despesasButtonActionPerformed
 
-    private void entradasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entradasButtonActionPerformed
+    private void receitasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receitasButtonActionPerformed
         // TODO add your handling code here:
         mainPanel.removeAll();
         mainPanel.add(despesasPanel);
         mainPanel.revalidate();
-    }//GEN-LAST:event_entradasButtonActionPerformed
+    }//GEN-LAST:event_receitasButtonActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
@@ -988,6 +1035,18 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tipoField1ActionPerformed
 
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        Receita r = new Receita(tipoField.getText(), dataField.getText(), Double.parseDouble(valorField.getText()), Integer.parseInt(parcelasField.getText()));
+        //jTable1.addRow(new Object[]{"Column 1", r.categoria, r.valor, r.parcelas. r.Data});
+        
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        Despesa d = new Despesa(tipoField.getText(), dataField.getText(), Double.parseDouble(valorField.getText()), Integer.parseInt(parcelasField.getText()));
+    }//GEN-LAST:event_jButton13ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1035,8 +1094,6 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
     private javax.swing.JLabel emailLabel1;
     private javax.swing.JLabel emailLabel2;
     private javax.swing.JLabel emailLabel3;
-    private javax.swing.JButton entradasButton;
-    private javax.swing.JPanel entradasPanel;
     private javax.swing.JTextField fonteRendaField;
     private javax.swing.JLabel fonteRendaLabel1;
     private javax.swing.JLabel fonteRendaLabel2;
@@ -1067,18 +1124,22 @@ public class TrabalhoFinalUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JTextField nomeDespField;
-    private javax.swing.JTextField nomeEntrField;
     private javax.swing.JTextField nomeField;
     private javax.swing.JLabel nomeLabel1;
     private javax.swing.JLabel nomeLabel2;
     private javax.swing.JLabel nomeLabel3;
+    private javax.swing.JTextField nomeReceitaField;
     private javax.swing.JTextField parcelasField;
     private javax.swing.JTextField parcelasField1;
     private javax.swing.JPanel planejamentoPanel;
+    private javax.swing.JButton receitasButton;
+    private javax.swing.JPanel receitasPanel;
     private javax.swing.JTextField rendaFixaField;
     private javax.swing.JLabel rendaLabel1;
     private javax.swing.JLabel rendaLabel2;
